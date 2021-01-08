@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="editScreen.EditScreenController">
+   <center>
+      <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="9.0" prefWidth="600.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="101.0" style="-fx-float: left;" text="Password Service">
+                     <HBox.margin>
+                        <Insets right="100.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="95.0" text="Password " />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="passwordService" />
+                  <TextField fx:id="password">
+                     <HBox.margin>
+                        <Insets left="3.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="errorText" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="334.0" textFill="#b55e5e">
+                     <VBox.margin>
+                        <Insets top="1.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="TOP_CENTER" prefHeight="101.0" prefWidth="600.0">
+                     <children>
+                        <Button fx:id="editButton" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: blue;" text="Edit" textFill="#252424" />
+                        <VBox prefHeight="101.0" prefWidth="104.0">
+                           <children>
+                              <RadioButton fx:id="softDelete" mnemonicParsing="false" text="Soft Delete" />
+                              <RadioButton fx:id="hardDelete" mnemonicParsing="false" prefHeight="24.0" prefWidth="85.0" text="Hard Delete" />
+                           </children>
+                           <padding>
+                              <Insets left="3.0" right="3.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="4.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#handleDeleteButtonClicked" style="-fx-border-color: red; -fx-background-color: transparent; -fx-text-fill: black;" text="Delete">
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignUpScreen.SignUpScreenController">
+   <center>
+      <VBox prefHeight="397.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Full Name">
+               <VBox.margin>
+                  <Insets left="100.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="fullName" promptText="Full Name">
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" />
+               </VBox.margin>
+            </TextField>
+            <Label fx:id="fullNameError" textFill="#b55252">
+               <VBox.margin>
+                  <Insets left="100.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Email">
+               <VBox.margin>
+                  <Insets left="100.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="email" promptText="Email">
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" />
+               </VBox.margin>
+            </TextField>
+            <Label fx:id="emailError" layoutX="50.0" layoutY="52.0" textFill="#b55252">
+               <VBox.margin>
+                  <Insets left="100.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Password">
+               <VBox.margin>
+                  <Insets left="100.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <PasswordField fx:id="password" promptText="Password">
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" />
+               </VBox.margin>
+            </PasswordField>
+            <Label fx:id="passwordError" textFill="#b55252">
+               <VBox.margin>
+                  <Insets left="100.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleSignUp" text="SignUp">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="handleChangeScreenToSignUp" mnemonicParsing="false" onAction="#handleChangeScreenToSignUp" style="-fx-background-color: transparent;" text="Sign In" textFill="#4042bc" underline="true">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <top>
+      <Label text="Sign Up" textFill="#355994" underline="true" BorderPane.alignment="TOP_LEFT">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets left="100.0" top="30.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+</BorderPane>

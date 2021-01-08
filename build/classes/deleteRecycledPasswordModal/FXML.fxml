@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="deleteRecycledPasswordModal.FXMLController">
+   <center>
+      <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="passwordService" />
+                  <TextField fx:id="password">
+                     <HBox.margin>
+                        <Insets left="3.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="29.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="errorMessage" textFill="#cd4c4c">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handlePermanentDelete" text="Permanent Delete" textFill="#dd5a5a" />
+               </children>
+            </HBox>
+         </children>
+         <effect>
+            <Blend />
+         </effect>
+      </VBox>
+   </center>
+</BorderPane>

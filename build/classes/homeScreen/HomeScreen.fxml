@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homeScreen.HomeScreenController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="_File">
+            <items>
+              <MenuItem mnemonicParsing="false" fx:id="recycleNav" text="Recycle Bin" onAction="#handleRedirctToRecycleScreen" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox>
+               <children>
+                  <TextField fx:id="addPasswordName" promptText="Name">
+                     <HBox.margin>
+                        <Insets left="2.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="addNewPasswordPassword" promptText="Password">
+                     <HBox.margin>
+                        <Insets left="2.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Separator prefHeight="19.0" prefWidth="93.0" />
+                  <TextField promptText="Search" fx:id="search"  />
+                  <Button mnemonicParsing="false" text="Search" onAction="#handleSearch">
+                     <HBox.margin>
+                        <Insets left="2.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="addPasswordError" textFill="#e44f4f">
+               <VBox.margin>
+                  <Insets left="4.0" />
+               </VBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#handleAddNewPassword" text="Add">
+               <VBox.margin>
+                  <Insets left="2.0" />
+               </VBox.margin>
+            </Button>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="passwordsTable" prefHeight="200.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></TableView>
+                     
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

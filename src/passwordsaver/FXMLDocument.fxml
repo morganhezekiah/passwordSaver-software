@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="passwordsaver.FXMLDocumentController">
+   <center>
+      <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="TOP_LEFT" prefHeight="17.0" prefWidth="543.0" text="Email">
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="email" onInputMethodTextChanged="#handleEmailChange" promptText="Email"  />
+            <Label fx:id="username_error" prefHeight="17.0" prefWidth="440.0" textFill="#c63737" />
+            <Label prefHeight="17.0" prefWidth="543.0" text="Password">
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </Label>
+            <PasswordField fx:id="password" promptText="Password"  />
+            <Label fx:id="password_error" prefHeight="17.0" prefWidth="438.0" textFill="#cd3f3f" />
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleLogin" prefHeight="25.0" prefWidth="68.0" text="Login" />
+                  <Button mnemonicParsing="false" onAction="#handleChangeScreenToSignUp" style="-fx-background-color: transparent;" text="Sign Up??" textFill="#405dc6" underline="true">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="100.0" right="100.0" top="50.0" />
+         </padding>
+      </VBox>
+   </center>
+   <top>
+      <Label text="Sign In" textFill="#2e489e" BorderPane.alignment="TOP_LEFT">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets left="100.0" top="40.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+</BorderPane>
